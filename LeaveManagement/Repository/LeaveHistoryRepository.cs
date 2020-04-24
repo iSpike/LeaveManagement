@@ -38,6 +38,11 @@ namespace LeaveManagement.Repository
             return _db.LeaveHistories.Find(id);
         }
 
+        public bool IsExists(int id)
+        {
+            throw new NotImplementedException();
+        }
+
         public bool Save()
         {
             return _db.SaveChanges() > 0;
