@@ -12,7 +12,7 @@ namespace LeaveManagement.Data
         [Key]
         public int Id { get; set; }
 
-        public int NuberOfDays { get; set; }
+        public int NumberOfDays { get; set; }
 
         public DateTime DateCreated { get; set; }
 
@@ -25,5 +25,7 @@ namespace LeaveManagement.Data
         public LeaveType LeaveType { get; set; }
 
         public int LeaveTypeId { get; set; }
+
+        public int Period { get; set; }
     }
 }
