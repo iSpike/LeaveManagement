@@ -11,6 +11,7 @@
     <link rel="stylesheet" href="~/lib/bootstrap/dist/css/bootstrap.min.css" />
     <link rel="stylesheet" href="//cdn.datatables.net/1.10.20/css/jquery.dataTables.min.css" />
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" />
+    <link rel="stylesheet" href="//code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css">
     <link rel="stylesheet" href="~/css/site.css" />
 </head>
 <body>
@@ -29,7 +30,7 @@
                             <a class="nav-link text-white" asp-area="" asp-controller="Home" asp-action="Index">Home</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link text-white" asp-area="" asp-controller="" asp-action="">Apply for leave</a>
+                            <a class="nav-link text-white" asp-area="" asp-controller="LeaveRequest" asp-action="Create">Apply for leave</a>
                         </li>
                         @if (SignInManager.IsSignedIn(User) && User.IsInRole("Administrator"))
                         {
@@ -40,7 +41,7 @@
                                 <div class="dropdown-menu" aria-labelledby="navbarDropdown">
                                     <a class="dropdown-item text-dark" asp-controller="LeaveTypes" asp-action="Index">Leave types</a>
                                     <a class="dropdown-item text-dark" asp-controller="LeaveAllocation" asp-action="Index">Leave allocations</a>
-                                    <a class="dropdown-item text-dark" asp-controller="LeaveTypes" asp-action="Index">Leave applications</a>
+                                    <a class="dropdown-item text-dark" asp-controller="LeaveRequest" asp-action="Index">Leave applications</a>
                                     <a class="dropdown-item text-dark" asp-controller="LeaveAllocation" asp-action="ListEmployees">Employees</a>
                                 </div>
                             </li>
@@ -64,6 +65,7 @@
     <script src="~/lib/jquery/dist/jquery.min.js"></script>
     <script src="~/lib/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
     <script src="//cdn.datatables.net/1.10.20/js/jquery.dataTables.min.js"></script>
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
     <script src="~/js/site.js" asp-append-version="true"></script>
     @RenderSection("Scripts", required: false)
 </body>

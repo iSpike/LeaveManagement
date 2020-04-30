@@ -1,3 +1,6 @@
 ﻿$(document).ready(function () {
-    $('#tblData').DataTable();
+    $('#tblData').DataTable;
+    $(".datepicker").datepicker({
+        dateFormat: "yy-mm-dd"
+    });
 });

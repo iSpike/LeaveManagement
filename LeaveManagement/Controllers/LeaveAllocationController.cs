@@ -146,7 +146,7 @@ namespace LeaveManagement.Controllers
 
                 return RedirectToAction(nameof(Details), new { id = model.EmployeeId });
             }
-            catch (Exception ex)
+            catch 
             {
                 return View();
             }
